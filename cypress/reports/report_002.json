@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-04-10T16:37:17.758Z",
+    "end": "2022-04-10T16:37:51.981Z",
+    "duration": 34223,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b898f590-b7a1-4519-aa07-3abb045a97eb",
+      "title": "",
+      "fullFile": "cypress/integration/login_Test.spec.js",
+      "file": "cypress/integration/login_Test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "login test",
+          "fullTitle": "login test",
+          "timedOut": null,
+          "duration": 12820,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "const email = \"test@test.com\";\nconst password = \"Applephone##12\";\ncy.visit('https://www.facebook.com');\ncy.get(':nth-child(1) > .base-borders > .jss4 > .jss21').type(email);\ncy.get(':nth-child(2) > .base-borders').type(password);\ncy.get('form > .jss1').click(); // cy.should('.notification-info','error')",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `:nth-child(1) > .base-borders > .jss4 > .jss21`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `:nth-child(1) > .base-borders > .jss4 > .jss21`, but never found it.\n    at Context.eval (https://www.facebook.com/__cypress/tests?p=cypress/integration/login_Test.spec.js:104:6)",
+            "diff": null
+          },
+          "uuid": "3d267ca2-320d-4af6-a2e3-098c766fbb05",
+          "parentUUID": "b898f590-b7a1-4519-aa07-3abb045a97eb",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "forget password",
+          "fullTitle": "forget password",
+          "timedOut": null,
+          "duration": 11012,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.facebook.com');\ncy.get('.custom-container > :nth-child(5)').click();\ncy.visit('https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0');\ncy.get('.base-borders').type('test@test.com');\ncy.get('form > .jss1').click();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.custom-container > :nth-child(5)`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.custom-container > :nth-child(5)`, but never found it.\n    at Context.eval (https://www.facebook.com/__cypress/tests?p=cypress/integration/login_Test.spec.js:110:6)",
+            "diff": null
+          },
+          "uuid": "0bf779d4-9ac9-427d-9b1d-4ea3101c2ce0",
+          "parentUUID": "b898f590-b7a1-4519-aa07-3abb045a97eb",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "tern & condition",
+          "fullTitle": "tern & condition",
+          "timedOut": null,
+          "duration": 10228,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.get(':nth-child(5) > .base-text__textAlign-center').click();\ncy.visit('https://www.facebook.com/legal/terms?ref=pf');",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `:nth-child(5) > .base-text__textAlign-center`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `:nth-child(5) > .base-text__textAlign-center`, but never found it.\n    at Context.eval (https://www.facebook.com/__cypress/tests?p=cypress/integration/login_Test.spec.js:116:6)",
+            "diff": null
+          },
+          "uuid": "1bccbfdd-8c56-49c1-9fe5-08c9f9b977ab",
+          "parentUUID": "b898f590-b7a1-4519-aa07-3abb045a97eb",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "3d267ca2-320d-4af6-a2e3-098c766fbb05",
+        "0bf779d4-9ac9-427d-9b1d-4ea3101c2ce0",
+        "1bccbfdd-8c56-49c1-9fe5-08c9f9b977ab"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 34060,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

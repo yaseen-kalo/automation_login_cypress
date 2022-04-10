@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-04-10T10:51:54.083Z",
+    "end": "2022-04-10T10:52:04.005Z",
+    "duration": 9922,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "030a6e0d-a5b2-4df4-80aa-990dea9b966d",
+      "title": "",
+      "fullFile": "cypress/integration/login_Test.spec.js",
+      "file": "cypress/integration/login_Test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "login test",
+          "fullTitle": "login test",
+          "timedOut": null,
+          "duration": 7259,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "const email = \"test@test.com\";\nconst password = \"Applephone##12\";\ncy.visit('https://login.sentryc.com/auth/login');\ncy.get(':nth-child(1) > .base-borders > .jss4 > .jss21').type(email);\ncy.get(':nth-child(2) > .base-borders').type(password);\ncy.get('form > .jss1').click(); // cy.should('.notification-info','error')",
+          "err": {},
+          "uuid": "7fedc44c-ba7a-4d76-9d63-7f39223a8585",
+          "parentUUID": "030a6e0d-a5b2-4df4-80aa-990dea9b966d",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "forget password",
+          "fullTitle": "forget password",
+          "timedOut": null,
+          "duration": 1800,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://login.sentryc.com/auth/login');\ncy.get('.custom-container > :nth-child(5)').click();\ncy.visit('https://login.sentryc.com/auth/forgot-password');\ncy.get('.base-borders').type('test@test.com');\ncy.get('form > .jss1').click();",
+          "err": {},
+          "uuid": "3b4916aa-3aef-4e32-aa9e-5a2298a506bf",
+          "parentUUID": "030a6e0d-a5b2-4df4-80aa-990dea9b966d",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "tern & condition",
+          "fullTitle": "tern & condition",
+          "timedOut": null,
+          "duration": 547,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.get(':nth-child(5) > .base-text__textAlign-center').click();\ncy.visit('https://login.sentryc.com/terms');",
+          "err": {},
+          "uuid": "5b6de5ac-52f4-41dc-8e5a-2597a7b11a1b",
+          "parentUUID": "030a6e0d-a5b2-4df4-80aa-990dea9b966d",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "7fedc44c-ba7a-4d76-9d63-7f39223a8585",
+        "3b4916aa-3aef-4e32-aa9e-5a2298a506bf",
+        "5b6de5ac-52f4-41dc-8e5a-2597a7b11a1b"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 9606,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
